@@ -1,1 +1,83 @@
+# Fichiers sensibles et logs
+*.log
+*.sqlite
+*.sqlite3
+error_log
+access_log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Dossiers d'environnement
+vendor/
+node_modules/
+.env
+.env.local
+.env.production
+
+# IDE et éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+
+# Fichiers de configuration locaux
+config/local.php
+config/.env
+.htaccess
+.htpasswd
+
+# Dossiers de compilation
+build/
+dist/
+release/
+
+# Fichiers de test
+test.php
+test2.php
+test_*.php
+diagnostic.php
+simple.php
+info.php
+test_db.php
+test_auth.php
+test_path.php
+test_logout.php
+test_redirect.php
+test_log.php
+
+# Dossiers spécifiques à WAMP/XAMPP
+logs/
+tmp/
+uploads/
+
+# Fichiers de base de données
+*.sql
+!sql/database.sql
+
+# Fichiers de compression
+*.zip
+*.rar
+*.tar.gz
+*.7z
+
+# Fichiers d'installation
+composer.phar
+composer.lock
+package-lock.json
+
 
