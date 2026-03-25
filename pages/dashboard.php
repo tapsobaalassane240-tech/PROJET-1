@@ -1,11 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 require_once '../config/database.php';
 require_once '../includes/header.php';
-
-echo "<!-- Debug: user_id = " . (isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 'non défini') . " -->";
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
@@ -87,7 +82,7 @@ $prochaines_taches = $stmt->fetchAll();
                 </tbody>
             </table>
         <?php else: ?>
-            <p>Aucune tâche programmée</p>
+            <p class="text-muted">Aucune tâche programmée</p>
         <?php endif; ?>
     </div>
 </div>
@@ -95,6 +90,9 @@ $prochaines_taches = $stmt->fetchAll();
 <div class="mt-3">
     <a href="taches/ajouter.php" class="btn btn-success">+ Ajouter une tâche</a>
     <a href="taches/index.php" class="btn btn-primary">Voir toutes mes tâches</a>
+    <a href="logs.php" class="btn btn-info text-white">
+        <i class="fas fa-history"></i> Historique des tâches
+    </a>
 </div>
 
 <?php require_once '../includes/footer.php'; ?>
